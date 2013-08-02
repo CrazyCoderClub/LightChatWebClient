@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LightWebChatClient</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div id="ChatLoginBody" class="span4">
+        <form id="WebChatLoginForm" action="#">
+          <fieldset>
+            <legend>Login</legend>
+            <div class="form-group">
+              <label for="Serveraddress">Chat Server address</label>
+              <select class="form-control" id="Serveraddress">
+                <option value="ws://127.0.0.1:8080">127.0.0.1:8080</option>
+                <option value="ws://test.test.hgd:8080">test.test.hgd:8080</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Username">Username</label>
+              <input type="text" class="form-control" id="Username" name="username" placeholder="Enter Username">
+            </div>
+            <button type="submit" class="btn btn-default">Connect</button>
+          </fieldset>
+        </form>
+    </div>
+
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Begin page content -->
+      <div class="span12" id="ChatBodyWrapper" >
+        <h2 id="WelcomeMessage"></h2>
+        <div id="ChatLeft" class="span3">
+          <div id="ChatLeftHead">
+            <button class="btn btn-primary ListButton">Userlist</button>
+            <button class="btn btn-primary ListButton">Roomlist</button>
+          </div>
+          <div id="ChatLeftList">
+            <div class="ListItem">SomeRoom</div>
+
+          </div>
+        </div>
+
+        <div id="ChatRight" class="span9">
+          <div id="ChatRightHead">
+            <button class="btn btn-info ChatRoom">Chatroom 1</button>
+            <button class="btn btn-info ChatRoom">Chatroom 2</button>
+          </div>
+          <div id="ChatDialog" class="span9">
+            <div id="DialogBox">
+            </div>
+
+            <form action="#">
+              <input type="text" class="span9" placeholder="Type message...">
+              <button type="submit" class="btn btn-primary span9" style="margin: 0">Send message</button>
+            </form>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div style="clear: both"></div>
+
+    <pre id="ChatLog">
+
+    </pre>
+
+    <div id="footer" style="margin: 10px 0;">
+      <div class="container">
+        <p class="text-muted credit">LightWebChatClient by <a href="http://metabyte.org">metabyte.org</a> and <a href="http://xardaska-network-system.net">xardaska-network-system.net</a>.</p>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery-ui.js"></script>
+  </body>
+</html>
